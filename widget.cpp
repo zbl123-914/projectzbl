@@ -61,7 +61,7 @@ void Widget::perform()
     if (query.exec("SELECT * FROM SysAdmins")) {
         QSqlRecord record = query.record();
         ui->tableWidget->setColumnCount(record.count());
-        ui->tableWidget->setHorizontalHeaderLabels({"ID", "Name", "Pwd", "Role"});
+        ui->tableWidget->setHorizontalHeaderLabels({"ID", "Name", "Pwd", "Scores"});  // 修改列标题
 
         while (query.next()) {
             ui->tableWidget->insertRow(row);
